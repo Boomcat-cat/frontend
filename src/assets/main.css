@@ -1,0 +1,49 @@
+/* 👉 Tailwind v4 核心引入 */
+@import "tailwindcss";
+
+/* 强制使用现代黑体/无衬线体，杀掉所有宋体/衬线体 */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f8fafc; /* 极浅的蓝灰底色，让纯白卡片能凸显出来 */
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .custom-terminal-scroll::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .custom-terminal-scroll::-webkit-scrollbar-track {
+    background: #0f172a;
+  }
+
+  .custom-terminal-scroll::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 4px;
+  }
+}
+
+/* 隐藏原生滚动条的自定义类，用于极客终端的干净滚动 */
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* ⚠️ 注意：原有的 #app、body、a、@media 等限制性样式已经全部删除！
+  我们将完全依靠 Tailwind 在 .vue 文件中控制布局和宽高。
+*/
