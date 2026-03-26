@@ -137,7 +137,7 @@ import { createBox } from 'ol/interaction/Draw'
 import { Vector } from 'ol/layer'
 import { Vector as VectorSource } from 'ol/source'
 import { Style, Fill, Stroke } from 'ol/style'
-import { ArrowLeft, Setting, Select, Edit, Operation, Delete, VideoPlay, Check, Location, Calendar, PartlyCloudy, Cpu } from '@element-plus/icons-vue'
+import { ArrowLeft, Setting, Select, Edit, Operation, Delete, VideoPlay, Check, Location, Calendar, PartlyCloudy, Cpu, FolderOpened } from '@element-plus/icons-vue'
 
 const router = useRouter()
 const username = ref(localStorage.getItem('username') || '')
