@@ -103,7 +103,7 @@ const fetchRecords = async () => {
   
   loading.value = true
   try {
-    const res = await axios.get('http://localhost:8000/my-records', {
+    const res = await axios.get('https://backend-1--ilenkaajennifer.replit.app/my-records', {
       headers: { Authorization: `Bearer ${token}` }
     })
     records.value = res.data

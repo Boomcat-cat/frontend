@@ -167,7 +167,7 @@ const startProcessing = async () => {
       ...form.value,
       date_range: form.value.date_range && form.value.date_range.length ? form.value.date_range.join(' ~ ') : '不限'
     }
-    await axios.post('http://localhost:8000/satellite/submit', payload, { headers: { Authorization: `Bearer ${token}` } })
+    await axios.post('https://backend-1--ilenkaajennifer.replit.app/satellite/submit', payload, { headers: { Authorization: `Bearer ${token}` } })
     ElMessage.success({ message: '🛰️ 云端监测引擎已启动，可前往个人页面查看进度！', duration: 3000 })
     router.push('/user-center') 
   } catch (err) {

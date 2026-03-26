@@ -70,7 +70,7 @@ const handleLogin = async () => {
     const formData = new FormData()
     formData.append('username', loginForm.value.username)
     formData.append('password', loginForm.value.password)
-    const res = await axios.post('http://localhost:8000/login', formData)
+    const res = await axios.post('https://backend-1--ilenkaajennifer.replit.app/login', formData)
     // 保存登录状态
     localStorage.setItem('token', res.data.access_token)
     localStorage.setItem('username', res.data.username)
@@ -97,7 +97,7 @@ const handleRegister = async () => {
   }
   loading.value = true
   try {
-    await axios.post('http://localhost:8000/register', registerForm.value)
+    await axios.post('https://backend-1--ilenkaajennifer.replit.app/register', registerForm.value)
     ElMessage.success('注册成功，请登录！')
     activeTab.value = 'login'
   } catch (err) {

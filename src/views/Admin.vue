@@ -68,7 +68,7 @@ const fetchRecords = async () => {
   loading.value = true
   try {
     const token = localStorage.getItem('token')
-    const res = await axios.get('http://localhost:8000/admin/records', {
+    const res = await axios.get('https://backend-1--ilenkaajennifer.replit.app/admin/records', {
       headers: { Authorization: `Bearer ${token}` }
     })
     records.value = res.data.map(r => ({ ...r, newStatus: r.status }))
@@ -88,7 +88,7 @@ const updateStatus = async (row) => {
   }
   try {
     const token = localStorage.getItem('token')
-    await axios.put('http://localhost:8000/admin/update-status', {
+    await axios.put('https://backend-1--ilenkaajennifer.replit.app/admin/update-status', {
       task_id: row.task_id,
       status: row.newStatus
     }, {
